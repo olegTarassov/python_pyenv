@@ -1,7 +1,7 @@
 ARG CENTOS_VERSION=8
 ARG USER_NAME="user"
 
-FROM artifacts.guavus.mtl:4244/centos:${CENTOS_VERSION} as base
+FROM centos:${CENTOS_VERSION} as base
 ARG USER_NAME
 
 ENV PATH="/home/${USER_NAME}/.pyenv/bin:$PATH"
