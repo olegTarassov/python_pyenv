@@ -5,6 +5,8 @@ FROM centos:${CENTOS_VERSION} as base
 ARG USER_NAME
 
 ENV PATH="/home/${USER_NAME}/.pyenv/bin:$PATH"
+ENV LC_ALL="C.UTF-8"
+ENV LANG="C.UTF-8"
 
 FROM base as builder
 ARG USER_NAME
